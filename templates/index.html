@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Avatar Generator</title>
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                font-family: Vazirmatn, sans-serif;
+                height: 100vh;
+                text-align: center;
+                direction: rtl;
+            }
+            .wrapper {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: fit-content;
+                max-height: fit-content;
+            }
+            .wrapper p {
+                font-size: 20px;
+                margin-top: 5rem;
+            }
+            .wrapper p a {
+                text-decoration-line: none;
+                color: #4285F4;
+            }
+            .wrapper img {
+                margin-top: 5rem;
+            }
+            .images {
+                max-width: fit-content;
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <p>
+                آواتار رندوم توسط کتابخانه
+                <a href="https://pypi.org/project/python-avatars/" target="_blank">python-avatars</a>
+                تولید می‌شود
+            </p>
+            <span>
+                ( با هر بار رفرش، آواتار جدیدی تولید می‌شود )
+            </span>
+            <div class="images">
+                <img src="{{ url_for('static', filename='avatar_1.svg') }}" alt="Random Avatar 1">
+                <img src="{{ url_for('static', filename='avatar_2.svg') }}" alt="Random Avatar 2">
+                <img src="{{ url_for('static', filename='avatar_3.svg') }}" alt="Random Avatar 3">
+                <img src="{{ url_for('static', filename='avatar_4.svg') }}" alt="Random Avatar 4">
+                <img src="{{ url_for('static', filename='avatar_5.svg') }}" alt="Random Avatar 5">
+            </div>
+        </div>
+    </body>
+</html>
